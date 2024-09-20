@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a primeira nota:");
+        double nota1 = sc.nextDouble();
+        System.out.println("Digite a segunda nota:");
+        double nota2 = sc.nextDouble();
+        System.out.println("Digite a terceira nota:");
+        double nota3 = sc.nextDouble();
+        System.out.println("Digite a quarta nota:");
+        double nota4 = sc.nextDouble();
+
+        mediaFinal(nota1, nota2, nota3, nota4);
+    }
+    private static void mediaFinal(double nota1, double nota2, double nota3, double nota4){
+        Scanner sc = new Scanner(System.in);
+        double novaMedia;
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
+        if (media >= 7){
+        System.out.println("Parabéns! Você está aprovado com a média " + media);
+        }
+ 
+        if (media < 7) {
+        System.out.println("Sua média é " + media + " Será necessário fazer uma recuperação.");
+        System.out.println("Digite a nota da recuperação:"); 
+        double notaRecuperacao = sc.nextDouble();
+
+        novaMedia = (media + notaRecuperacao) / 2;
+            if (novaMedia >= 7){
+                System.out.println("Parabéns! Você está aprovado com a média " + novaMedia);}
+            else if (novaMedia < 7){
+                System.out.println("Você está reprovado com a média " + novaMedia);
+            }
+                
+
+            }
+        }
+    
+    }
